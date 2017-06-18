@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * @file
+ * baw_breadcrumb.module
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function baw_breadcrumb_menu() {
+  $items = array();
+  return $items;
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function baw_breadcrumb_form_alter() {
+
+}
+
+function baw_breadcrumb_theme($existing, $type, $theme, $path) {
+    return array('baw_breadcrumb_block' =>
+        array(
+            'variables' => array(
+                'title' => 'Template Block Breadcrumb',
+                'description' => null,
+                'breadcrumb' => 'fff',
+            ),
+            'template' => 'block--baw-breadcrumb'
+        )
+    );
+}

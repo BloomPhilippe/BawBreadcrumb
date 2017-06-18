@@ -1,0 +1,17 @@
+<h1 style="color: #ffffff">{{ breadcrumb['title_page'] }}</h1>
+<ol class="breadcrumbs">
+    <li>
+        <a href="/">{{ 'Accueil'|trans }}</a>
+    </li>
+    {% if breadcrumb['links'] %}
+        {% for item in breadcrumb['links'] %}
+            <li>
+                {% if loop.last %}
+                    {{ item['name'] }}
+                {% else %}
+                    {{ item['link'] | raw }}
+                {% endif %}
+            </li>
+        {% endfor %}
+    {% endif %}
+</ol>

@@ -1,0 +1,6 @@
+baw_breadcrumb.start:
+    path: /custom/start
+    defaults:
+        _controller: '\Drupal\baw_breadcrumb\Controller\BawBreadcrumbStartController::startAction'
+    requirements:
+        _permission: 'access content'
